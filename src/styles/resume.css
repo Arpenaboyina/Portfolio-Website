@@ -1,0 +1,84 @@
+/* Simplified and Lightened Resume CSS */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9; /* Light, neutral background */
+    font-family: Arial, sans-serif; /* Simple font */
+}
+
+.resume-section {
+    max-width: 600px;
+    padding: 50px; /* Reduced padding for simplicity */
+    background-color: #ffffff; /* White background for better contrast */
+    border-radius: 20px; /* Soft rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.resume-section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 1.8rem; /* Adjusted for simplicity */
+    color: #444; /* Neutral dark gray text */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #666; /* Lighter gray text */
+    margin: 10px 0;
+}
+
+.resume-link {
+    text-decoration: none;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6fa3ef; /* Light blue for primary button */
+    border: none;
+    border-radius: 10px; /* Softer rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background-color: #ffa07a; /* Soft salmon for hover effect */
+    transform: translateY(-3px);
+}
+
+.download-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(111, 163, 239, 0.5); /* Subtle focus effect */
+}
+
+/* Smaller screens adjustments */
+@media (max-width: 768px) {
+    .resume-section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .download-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}

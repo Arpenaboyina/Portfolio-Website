@@ -1,0 +1,70 @@
+/* projectDetails.css */  
+
+/* Reset CSS */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+.project-grid {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
+    gap: 100px; /* Space between cards */  
+    padding: 20px;  
+}  
+
+.project-card {  
+    background-color: white;  
+    border-radius: 50px;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */  
+    overflow: hidden; /* Prevent overflow */  
+    padding: 40px; /* Add padding for content */  
+    text-align: center; /* Center align text */  
+    min-height: 300px; /* Set a minimum height */  
+    min-width: 400px;
+}  
+
+.project-card:hover {  
+    transform: translateY(-5px); /* Lift effect on hover */  
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */  
+}  
+
+h3 {  
+    font-size: 1.5rem;  
+    margin: 15px 0 10px;  
+    color: #333;  
+}  
+
+p {  
+    color: #666; /* Slightly lighter text for description */  
+    margin: 10px 0; /* Add margin between paragraphs */  
+}  
+
+.view-project-btn {  
+    display: inline-block;  
+    margin-top: 15px;  
+    padding: 10px 15px;  
+    text-align: center;  
+    background-color: #0093E9;  
+    color: white;  
+    text-decoration: none;  
+    border-radius: 5px;  
+    transition: background 0.3s;  
+}  
+
+.view-project-btn:hover {  
+    background-color: #007bb5; /* Darker shade on hover */  
+}  
+
+/* Responsive Styles */  
+@media (max-width: 768px) {  
+    .project-card {  
+        margin-bottom: 20px; /* Space below cards on smaller screens */  
+    }  
+
+    h3 {  
+        font-size: 1.25rem; /* Slightly smaller title on smaller devices */  
+    }  
+}
