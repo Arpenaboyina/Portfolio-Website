@@ -10,20 +10,19 @@
 .project-grid {  
     display: grid;  
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
-    gap: 100px; /* Space between cards */  
+    gap: 30px; /* Adjusted space between cards for smaller screens */  
     padding: 20px;  
 }  
 
 .project-card {  
     background-color: white;  
-    border-radius: 50px;  
+    border-radius: 15px; /* Slightly less rounded corners for better appearance on mobile */  
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
     transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */  
     overflow: hidden; /* Prevent overflow */  
-    padding: 40px; /* Add padding for content */  
+    padding: 20px; /* Reduced padding for better fitting on small screens */  
     text-align: center; /* Center align text */  
     min-height: 300px; /* Set a minimum height */  
-    min-width: 400px;
 }  
 
 .project-card:hover {  
@@ -60,8 +59,14 @@ p {
 
 /* Responsive Styles */  
 @media (max-width: 768px) {  
+    .project-grid {  
+        grid-template-columns: 1fr;  /* Stacks the project cards vertically on small screens */  
+        gap: 20px; /* Reduced gap on smaller devices */  
+    }  
+
     .project-card {  
-        margin-bottom: 20px; /* Space below cards on smaller screens */  
+        min-width: 100%; /* Ensures the card takes up the full width of the screen on mobile */  
+        padding: 20px; /* Adjusted padding for smaller screens */  
     }  
 
     h3 {  

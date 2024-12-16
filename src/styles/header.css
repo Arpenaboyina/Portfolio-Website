@@ -5,12 +5,14 @@
     padding: 10px 20px;
 }
 
+/* Navigation Bar Styles */
 .nav-bar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space out the nav items on larger screens */
     align-items: center;
 }
 
+/* Navigation List Styles */
 .nav-list {
     list-style-type: none;
     display: flex;
@@ -25,6 +27,7 @@
     position: relative;
 }
 
+/* Link Styling */
 .nav-link {
     text-decoration: none;
     color: #333;
@@ -36,6 +39,7 @@
     transform: scale(1.1);
 }
 
+/* Underline Effect on Hover */
 .nav-link:after {
     content: '';
     display: block;
@@ -50,16 +54,29 @@
     width: 100%;
 }
 
-/* Responsive Header */
+/* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
-    .nav-list {
-        gap: 20px;
-        font-size: 1.2rem;
+    /* Adjust navigation bar for smaller screens */
+    .nav-bar {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: flex-start; /* Align items to the start */
     }
-}
 
-@media (max-width: 768px) {
+    /* Adjust navigation list styling for smaller screens */
     .nav-list {
-        gap: 10px;
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 15px; /* Reduce gap between items */
+        font-size: 1.2rem; /* Adjust font size for better readability */
+    }
+
+    /* Navigation items should be centered on smaller screens */
+    .nav-item {
+        font-size: 1.2rem; /* Reduce font size for mobile */
+        text-align: center; /* Ensure nav items are centered */
+    }
+    
+    /* Make sure header container padding is responsive */
+    .header-container {
+        padding: 15px 10px; /* Adjust padding on mobile for better spacing */
     }
 }

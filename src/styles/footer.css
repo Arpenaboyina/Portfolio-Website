@@ -22,6 +22,7 @@
     justify-content: center;
     gap: 15px;
     margin: 15px 0;
+    flex-wrap: wrap; /* Allow links to wrap on small screens */
 }
 
 .footer-btn {
@@ -69,30 +70,43 @@
     font-size: 1rem;
 }
 
-/* Footer Styles */
+/* Adjust footer styling for smaller screens */
 .footer {
-    padding: 15px; /* Reduce padding */
-    font-size: 0.9rem; /* Adjust font size */
+    padding: 15px; /* Reduced padding for mobile */
+    font-size: 0.9rem; /* Adjust font size for better readability */
 }
 
 .footer-links {
-    gap: 10px; /* Reduce gap */
-    flex-wrap: wrap; /* Allow links to wrap */
+    gap: 10px; /* Reduce the space between links */
+    flex-wrap: wrap; /* Allow links to wrap if necessary */
+    justify-content: center; /* Center the links */
 }
 
 .footer-btn {
-    padding: 8px 20px; /* Smaller buttons */
-    font-size: 0.8rem;
+    padding: 8px 20px; /* Reduce button size */
+    font-size: 0.8rem; /* Reduce font size */
+    max-width: 100%; /* Make buttons responsive */
 }
 
-/* Responsive for phones */
+/* Responsive for small screens (phones) */
 @media (max-width: 768px) {
     .footer {
-        padding: 10px;
+        padding: 10px; /* Further reduce padding for very small screens */
     }
 
     .footer-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 8px;
+        flex-direction: column; /* Stack footer links vertically on small screens */
+        gap: 8px; /* Reduced gap between stacked links */
+    }
+
+    .footer-btn {
+        padding: 8px 20px; /* Ensure buttons are smaller on small screens */
+        font-size: 0.8rem;
+        width: 100%; /* Make buttons take full width */
+        max-width: none; /* Remove width restriction */
+    }
+
+    .contact-info {
+        font-size: 0.9rem; /* Adjust contact info font size */
     }
 }

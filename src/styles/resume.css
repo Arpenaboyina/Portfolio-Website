@@ -12,12 +12,14 @@ body {
 
 .resume-section {
     max-width: 600px;
+    width: 100%; /* Ensure the section fills the width of the container */
     padding: 50px; /* Reduced padding for simplicity */
     background-color: #ffffff; /* White background for better contrast */
     border-radius: 20px; /* Soft rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
     text-align: center;
     transition: transform 0.3s;
+    box-sizing: border-box; /* Ensure padding does not overflow */
 }
 
 .resume-section:hover {
@@ -66,19 +68,20 @@ p {
 /* Smaller screens adjustments */
 @media (max-width: 768px) {
     .resume-section {
-        padding: 20px;
+        padding: 20px; /* Reduced padding for smaller screens */
+        max-width: 100%; /* Ensure it fills the available width */
     }
 
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.4rem; /* Slightly smaller title on smaller devices */
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Slightly smaller text for paragraphs */
     }
 
     .download-btn {
         font-size: 0.9rem;
-        padding: 8px 15px;
+        padding: 8px 15px; /* Smaller button size on mobile */
     }
 }
