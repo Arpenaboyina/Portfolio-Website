@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/header.css'; // Assuming a separate CSS file for styling
+import '../styles/header.css'; // Assuming header.css is located in the styles folder
 
 const Header = () => {
   return (

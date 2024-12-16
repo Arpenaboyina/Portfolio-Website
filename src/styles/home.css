@@ -5,19 +5,20 @@
 
 /* About Section */
 .about-section {
-    background: linear-gradient(to right, #f71919, #5cd5e5); /* Light pastel gradient */
-    color: #333;
-    padding: 50px 50px;
+    background: linear-gradient(to right, #5cd5e5, #f71919); /* Light pastel gradient */
+    color: #fff;
+    padding: 60px 20px;
     text-align: center;
     background-size: cover;
     background-position: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .bounce {
     font-size: 3rem;
     margin-bottom: 20px;
     animation: bounce 2s infinite;
-    color: #007bb5;
+    color: #fff;
 }
 
 /* About Me Section */
@@ -25,7 +26,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Ensure elements wrap on small screens */
+    flex-wrap: wrap;
+    padding: 40px 20px;
 }
 
 .about-me-content {
@@ -34,13 +36,16 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    flex-wrap: wrap; /* Ensure content wraps on small screens */
-    padding: 20px; /* Add padding for spacing */
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .about-me-image-container {
-    width: 300px; /* Reduced width for mobile */
-    height: 300px; /* Reduced height for mobile */
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
@@ -51,6 +56,11 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.about-me-image:hover {
+    transform: scale(1.05);
 }
 
 .about-me-text {
@@ -61,11 +71,13 @@
 .about-me-text h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .about-me-text p {
     font-size: 1.1rem;
     line-height: 1.6;
+    color: #666;
 }
 
 /* Projects Section */
@@ -76,33 +88,14 @@
     background-image: url('../styles/images/backgroundimage1.jpg');
     background-size: cover;
     background-position: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .projects-section h2 {
     margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #444;
-}
-
-/* First Image Section */
-.first-image-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f1f1f1;
-    margin-top: 30px; /* Adds space between Projects and Image */
-}
-
-.first-image {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.first-image:hover {
-    transform: scale(1.05);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Section */
@@ -116,21 +109,23 @@
 .contact-section h2 {
     margin-bottom: 20px;
     color: #444;
+    font-size: 2rem;
 }
 
 .contact-btn {
     background-color: #80d0c7;
     color: #333;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .contact-btn:hover {
     background-color: #66b2a7;
+    transform: scale(1.05);
 }
 
 /* Animations */
@@ -158,40 +153,34 @@
 /* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
     .bounce {
-        font-size: 2rem; /* Reduced font size */
+        font-size: 2rem;
     }
 
-    /* About Section and other sections padding */
-    .about-section,
-    .projects-section,
-    .contact-section {
-        padding: 30px 10px; /* Reduced padding for better spacing */
+    .about-section, .projects-section, .contact-section {
+        padding: 30px 10px;
     }
 
-    /* Adjust the about section layout for mobile */
     .about-me-section {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center text */
+        flex-direction: column;
+        text-align: center;
     }
 
     .about-me-content {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center the content */
-        padding: 20px; /* Added padding for spacing */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
 
-    /* About me image container adjustments */
     .about-me-image-container {
-        margin-bottom: 20px; /* Space below the image */
+        margin-bottom: 20px;
     }
 
     .contact-btn {
         padding: 8px 16px;
-        font-size: 1rem; /* Smaller button font size */
+        font-size: 1rem;
     }
 
-    /* Image section responsive for mobile */
     .first-image {
-        width: 90%; /* Make the image slightly smaller */
+        width: 90%;
     }
 }
