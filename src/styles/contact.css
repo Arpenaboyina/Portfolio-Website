@@ -94,4 +94,8 @@
     font-family: 'Arial', sans-serif;
     animation: randomBackground 10s infinite;
   }
-  
+  @media (max-width: 768px) {
+    .contact-container {
+        padding: 1.5rem; /* Smaller padding for phones */
+    }
+}

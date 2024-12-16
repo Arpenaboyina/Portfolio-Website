@@ -57,3 +57,9 @@
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 768px) {
+    .nav-list {
+        gap: 10px;
+    }
+}

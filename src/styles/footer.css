@@ -68,3 +68,31 @@
     margin-top: 10px;
     font-size: 1rem;
 }
+
+/* Footer Styles */
+.footer {
+    padding: 15px; /* Reduce padding */
+    font-size: 0.9rem; /* Adjust font size */
+}
+
+.footer-links {
+    gap: 10px; /* Reduce gap */
+    flex-wrap: wrap; /* Allow links to wrap */
+}
+
+.footer-btn {
+    padding: 8px 20px; /* Smaller buttons */
+    font-size: 0.8rem;
+}
+
+/* Responsive for phones */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 8px;
+    }
+}
